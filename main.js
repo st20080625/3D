@@ -26,14 +26,14 @@ class vec3D {
     if (axis == "x") {
       return new vec3D(
         this.x,
-        this.y * cos(rad) - this.z * sin(rad),
-        this.y * sin(rad) + this.z * cos(rad)
+        this.y * cos(rad) + this.z * sin(rad),
+        -this.y * sin(rad) + this.z * cos(rad)
       );
     } else if (axis == "y") {
       return new vec3D(
-        this.x * cos(rad) + this.z * sin(rad),
+        this.x * cos(rad) - this.z * sin(rad),
         this.y,
-        -this.x * sin(rad) + this.z * cos(rad)
+        this.x * sin(rad) + this.z * cos(rad)
       );
     } else if (axis == "z") {
       return new vec3D(
